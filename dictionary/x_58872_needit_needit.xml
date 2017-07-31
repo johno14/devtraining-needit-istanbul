@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="helpdesk" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Helpdesk" sequence="0" value="helpdesk"/>
+                <element label="Client Engineering" sequence="1" value="client_engrg"/>
+                <element label="Onsite Support" sequence="2" value="onsite_support"/>
+                <element label="Access Management" sequence="3" value="access_mgmt"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="corp_helpdesk" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Human Resources 1" sequence="0" value="hr1"/>
+                <element label="Human Resources 2" sequence="1" value="hr2"/>
+                <element label="Facilities 1" sequence="2" value="facilities1"/>
+                <element label="Facilities 2" sequence="3" value="facilities2"/>
+                <element label="Legal 1" sequence="4" value="legal1"/>
+                <element label="Legal 2" sequence="5" value="legal2"/>
+                <element label="Corporate Helpdesk" sequence="6" value="corp_helpdesk"/>
+                <element label="Site Helpdesk" sequence="7" value="site_helpdesk"/>
+                <element label="Corporate Client Engineering" sequence="8" value="corp_client_engrg"/>
+                <element label="Site Client Engineering" sequence="9" value="site_client_engrg"/>
+                <element label="Onsite Support PH" sequence="10" value="ph_onsite_support"/>
+                <element label="Onsite Support US" sequence="11" value="us_onsite_support"/>
+                <element label="Onsite Support UK" sequence="12" value="uk_onsite_support"/>
+                <element label="Corporate Access Management" sequence="13" value="corp_access_mgmt"/>
+                <element label="Access Management US" sequence="14" value="us_access_mgmt"/>
+                <element label="Access Management UK" sequence="15" value="uk_access_mgmt"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
